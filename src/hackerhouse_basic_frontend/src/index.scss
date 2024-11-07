@@ -10,7 +10,17 @@ img {
   margin: auto;
 }
 
-form {
+h1, form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  flex-flow: row wrap;
+  max-width: 40vw;
+  margin: auto;
+  align-items: baseline;
+}
+
+#nfid-section {
   display: flex;
   justify-content: center;
   gap: 0.5em;
@@ -26,12 +36,12 @@ button[type="submit"] {
   float: right;
 }
 
-#greeting {
+.response {
   margin: 10px auto;
   padding: 10px 60px;
   border: 1px solid #222;
 }
 
-#greeting:empty {
+.response:empty {
   display: none;
 }

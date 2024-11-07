@@ -1,14 +1,24 @@
 import { useState } from "react";
-import { hackerhouse_basic_backend } from "declarations/hackerhouse_basic_backend";
+import NfidLogin from "./components/NfidLogin";
 
 function App() {
-  const [greeting, setGreeting] = useState("");
+  const [backendActor, setBackendActor] = useState();
+  const [userId, setUserId] = useState();
+  const [userName, setUserName] = useState();
 
-  function handleSubmit(event) {
+  function handleSubmitUserProfile(event) {
     event.preventDefault();
     const name = event.target.elements.name.value;
-    hackerhouse_basic_backend.greet(name).then((greeting) => {
-      setGreeting(greeting);
+    backendActor.setUserProfile(name).then((response) => {
+      if (response.ok) {
+        setUserId(response.ok.id.toString());
+        setUserName(response.ok.name);
+      } else if (response.err) {
+        setUserId(response.err);
+      } else {
+        console.error(response);
+        setUserId("Unexpected error, check the console");
+      }
     });
     return false;
   }
@@ -18,12 +28,23 @@ function App() {
       <img src="/logo2.svg" alt="DFINITY logo" />
       <br />
       <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
+      <h1>Welcome to IC AI Hacker House!</h1>
+      {!backendActor && (
+        <section id="nfid-section">
+          <NfidLogin setBackendActor={setBackendActor}></NfidLogin>
+        </section>
+      )}
+      {backendActor && (
+        <>
+          <form action="#" onSubmit={handleSubmitUserProfile}>
+            <label htmlFor="name">Enter your name: &nbsp;</label>
+            <input id="name" alt="Name" type="text" />
+            <button type="submit">Save</button>
+          </form>
+          {userId && <section className="response">{userId}</section>}
+          {userName && <section className="response">{userName}</section>}
+        </>
+      )}
     </main>
   );
 }

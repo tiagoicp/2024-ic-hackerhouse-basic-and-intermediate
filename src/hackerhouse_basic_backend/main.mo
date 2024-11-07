@@ -7,10 +7,6 @@ import Text "mo:base/Text";
 import Cycles "mo:base/ExperimentalCycles";
 
 actor {
-    public shared ({ caller }) func setUserId() : async Result.Result<Nat, Text> {
-        return #ok(123);
-    };
-
     public query ({ caller }) func getUserProfile() : async Result.Result<{ id : Nat; name : Text }, Text> {
         return #ok({ id = 123; name = "test" });
     };

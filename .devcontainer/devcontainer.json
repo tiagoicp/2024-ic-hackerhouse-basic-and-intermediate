@@ -23,7 +23,10 @@
         "GitHub.copilot",
         "esbenp.prettier-vscode"
       ],
-      "settings": { "editor.formatOnSave": true }
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
     }
   }
 }
