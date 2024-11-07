@@ -17,7 +17,13 @@
   "postAttachCommand": "([ -f nohup.out ] && (cat nohup.out && rm nohup.out)) || exit 0",
   "customizations": {
     "vscode": {
-      "extensions": ["dfinity-foundation.vscode-motoko", "ms-python.python"]
+      "extensions": [
+        "dfinity-foundation.vscode-motoko",
+        "ms-python.python",
+        "GitHub.copilot",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": { "editor.formatOnSave": true }
     }
   }
 }
