@@ -40,6 +40,9 @@ Note: Feel free to listen at 1.2x speed 😛
 IC Overview (recorded on a recent workshop with CS Students):
 - https://www.youtube.com/watch?v=wyHAh9i1cFI
 
+Challenge Overview and Submission Instructions 
+- https://www.loom.com/share/183cb33b30e34bf5a093ca5eaf9c9c16
+
 Basic:
 - Github and Codespace setup
 - Overview of code structure
