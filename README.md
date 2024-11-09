@@ -51,6 +51,7 @@ Basic:
   - (part 1) https://www.loom.com/share/ed875f6b86ae41c492ee6b0fe721b402
   - (part 2) https://www.loom.com/share/1bee546548d948f591bfc11de2066359
 - Store more complex data, like previous model results associated with an User.
+  - https://www.loom.com/share/1e7790892d2a459f9193b8ca30074bf6
 
 Intermediate:
 - HTTP Outcall and Hugging Face API overview
