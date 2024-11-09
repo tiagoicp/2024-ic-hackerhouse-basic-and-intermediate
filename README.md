@@ -43,6 +43,7 @@ IC Overview (recorded on a recent workshop with CS Students):
 Basic:
 - Github and Codespace setup
 - Overview of code structure
+  -   https://www.loom.com/share/b7889a4beb2d4136acc89213756c0c82
 - Login and user registration / update
 - Store more complex data, like previous model results associated with an User.
 
