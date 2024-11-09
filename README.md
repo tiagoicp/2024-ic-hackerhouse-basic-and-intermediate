@@ -57,6 +57,7 @@ Intermediate:
 - HTTP Outcall and Hugging Face API overview
 - Call and parse the data, and select best result
 - Render and improve frontend to enable user to better interact with the features you built.
+  - https://www.loom.com/share/ee46c7c0daf44bc39030fc5ba560c50f   
 
 
 
